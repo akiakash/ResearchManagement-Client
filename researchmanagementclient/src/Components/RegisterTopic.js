@@ -11,9 +11,10 @@ function RegisterTopic() {
           textAlign: "center",
           marginLeft: "10%",
           marginRight: "10%",
-          fontSize: "25px",
+          fontSize: "20px",
           marginTop: "30px",
           fontFamily: "Roboto",
+          lineHeight: "50px",
         }}
       >
         Online chat may refer to any kind of communication over the Internet

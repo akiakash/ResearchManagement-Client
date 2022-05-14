@@ -22,8 +22,8 @@ function App() {
     //   </BrowserRouter>
     // </div>
     <>
-      {/* <MainHome /> */}
-      <RegisterTopic />
+      <MainHome />
+      {/* <RegisterTopic /> */}
     </>
   );
 }

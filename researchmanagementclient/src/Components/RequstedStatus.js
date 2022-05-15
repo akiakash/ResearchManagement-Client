@@ -37,16 +37,17 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   }
   
   const rows = [
-    createData('Frozen yoghurt', 159, 6.0, 24, ),
-    createData('Ice cream sandwich', 237, 9.0, 37,),
-    createData('Eclair', 262, 16.0, 24, ),
-    createData('Cupcake', 305, 3.7, 67, ),
-    createData('Gingerbread', 356, 16.0, 49, ),
+    createData('dhanu', 1, 1, 1,),
+    createData('dhanu', 1, 1, 1,),
+    createData('dhanu', 1, 1, 1,),
+    createData('dhanu', 1, 1, 1,),
+    createData('dhanu', 1, 1, 1, ),
   ];
 function RequstedStatus() {
   return (
     <div>
     <h1 style={{ textAlign: "center" }}> Requsted Status</h1>
+    
 
     <Card
       style={{
@@ -70,21 +71,35 @@ function RequstedStatus() {
           <b> </b>
         </h1>
         <div>
-          <label>Group ID</label>
-          <br></br>
+        <Box
+
+        component="img"
         
-         
-        </div>
-      
+        sx={{
+            
+          height: 500,
+          width: 500,
+ 
+          maxHeight: { xs: 200, md: 150 },
+          maxWidth: { xs: 200, md: 150 },
+        }
+    }
+        alt="image"
+        src="./round.png"
+      />
+      <br></br>
+          <label>Group ID</label>
+          <label>xxxxxxx</label>
+          <br></br>
+      </div>
       <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 600 }} aria-label="customized table">
+      <Table sx={{ minWidth: 700 }} aria-label="customized table">
         <TableHead>
           <TableRow>
-            <StyledTableCell>Dessert (100g serving)</StyledTableCell>
-            <StyledTableCell align="right">Calories</StyledTableCell>
-            <StyledTableCell align="right">Fat&nbsp;(g)</StyledTableCell>
-            <StyledTableCell align="right">Carbs&nbsp;(g)</StyledTableCell>
-            
+            <StyledTableCell>Name </StyledTableCell>
+            <StyledTableCell align="right">Potition</StyledTableCell>
+            <StyledTableCell align="right">Status&nbsp;</StyledTableCell>
+            <StyledTableCell align="right">Action&nbsp;</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -96,7 +111,6 @@ function RequstedStatus() {
               <StyledTableCell align="right">{row.calories}</StyledTableCell>
               <StyledTableCell align="right">{row.fat}</StyledTableCell>
               <StyledTableCell align="right">{row.carbs}</StyledTableCell>
-              <StyledTableCell align="right">{row.protein}</StyledTableCell>
             </StyledTableRow>
           ))}
         </TableBody>

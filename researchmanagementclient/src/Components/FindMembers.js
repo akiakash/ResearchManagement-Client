@@ -39,11 +39,10 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   }
   
   const rows = [
-    createData('dhanu', 1, 1, 1,),
-    createData('dhanu', 1, 1, 1,),
-    createData('dhanu', 1, 1, 1,),
-    createData('dhanu', 1, 1, 1,),
-    createData('dhanu', 1, 1, 1, ),
+    createData('it20051648', 'dhanu', 'danu@gmail.com', 1562562,),
+    createData('it20051648', 'dhanu', 'danu@gmail.com', 1562562,),
+    createData('it20051648', 'dhanu', 'danu@gmail.com', 1562562,),
+
   ];
 function FindMembers() {
   return (
@@ -153,10 +152,11 @@ function FindMembers() {
         </Box>
       </Card>
       <br></br>
+      <br></br>
       <h1 style={{ fontFamily: "Roboto", textAlign: "center" }}>
         <b>Requested Student List</b>
       </h1>
-      <br></br>
+    
 
       <Card
       style={{
@@ -181,10 +181,10 @@ function FindMembers() {
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
         <TableHead>
           <TableRow>
-            <StyledTableCell>Name </StyledTableCell>
-            <StyledTableCell align="right">Potition</StyledTableCell>
-            <StyledTableCell align="right">Status&nbsp;</StyledTableCell>
-            <StyledTableCell align="right">Action&nbsp;</StyledTableCell>
+            <StyledTableCell>Student ID </StyledTableCell>
+            <StyledTableCell align="right">Name</StyledTableCell>
+            <StyledTableCell align="right">Email&nbsp;</StyledTableCell>
+            <StyledTableCell align="right">Phone&nbsp;</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>

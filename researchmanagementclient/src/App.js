@@ -9,6 +9,9 @@ import Footer from "./Bars/Footer";
 import Home1 from "./Home/Home1";
 import MainHome from "./Home/MainHome";
 import RegisterTopic from "./Components/RegisterTopic";
+import Request from "./Components/Request_Supervisor";
+import Request_Supervisor from "./Components/Request_Supervisor";
+
 function App() {
   return (
     // <div className="App">
@@ -23,7 +26,7 @@ function App() {
     // </div>
     <>
       {/* <MainHome /> */}
-      <RegisterTopic />
+      <Request_Supervisor />
     </>
   );
 }

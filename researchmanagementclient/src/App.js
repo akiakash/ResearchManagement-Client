@@ -13,6 +13,8 @@ import RegisterTopic from "./Components/RegisterTopic";
 
 
 import RequstedStatus from "./Components/RequstedStatus";
+import ViewShedule from "./Components/ViewShedule";
+import ViewMarks from "./Components/ViewMarks";
 
 function App() {
   return (
@@ -31,8 +33,10 @@ function App() {
       {/* <MainHome /> */}
 
       
-      <RequstedStatus />
+      {/* <RequstedStatus /> */}
       {/* <RegisterTopic /> */}
+      {/* <ViewShedule/> */}
+       <ViewMarks/>
 
     </>
   );

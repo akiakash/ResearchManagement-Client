@@ -17,9 +17,11 @@ app.use(bodyParser.json());
 
 // import routes
 const UserManagement = require("./Admin/routes/UserManagement");
+const StaffManagement = require("./Admin/routes/StaffManagement");
 
 // api paths
 app.use("/UserManagement", UserManagement);
+app.use("/StaffManagement", StaffManagement);
 
 app.get("/", (req, res) => {
   res.send("We are on Home");

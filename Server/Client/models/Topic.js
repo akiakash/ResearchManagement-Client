@@ -1,22 +1,22 @@
 const mongoose = require("mongoose");
 
 const PostSchema = mongoose.Schema({
-  groupid: {
+  groupno: {
     type: String,
     required: true,
   },
-  date: {
+  topicname: {
     type: String,
     required: true,
   },
-  time: {
+  description: {
     type: String,
     required: true,
   },
-  allocatedpanel: {
+  leaderid: {
     type: String,
     required: true,
   },
 });
 
-module.exports = mongoose.model("Schedule", PostSchema);
+module.exports = mongoose.model("Topic", PostSchema);

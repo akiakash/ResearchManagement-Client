@@ -18,10 +18,22 @@ app.use(bodyParser.json());
 // import routes
 const UserManagement = require("./Admin/routes/UserManagement");
 const StaffManagement = require("./Admin/routes/StaffManagement");
+const ScheduleManagement = require("./Admin/routes/ScheduleManagement");
+const MarksManagement = require("./Admin/routes/MarksManagement");
+const DocumentManagement = require("./Admin/routes/DocumentManagement");
+const TopicManagement = require("./Client/routes/TopicManagement");
+const RequestManagement = require("./Client/routes/RequestManagement");
+const RequestManagementAdmin = require("./Admin/routes/RequestManagementAdmin");
 
 // api paths
 app.use("/UserManagement", UserManagement);
 app.use("/StaffManagement", StaffManagement);
+app.use("/ScheduleManagement", ScheduleManagement);
+app.use("/MarksManagement", MarksManagement);
+app.use("/DocumentManagement", DocumentManagement);
+app.use("/TopicManagement", TopicManagement);
+app.use("/RequestManagement", RequestManagement);
+app.use("/RequestManagementAdmin", RequestManagementAdmin);
 
 app.get("/", (req, res) => {
   res.send("We are on Home");

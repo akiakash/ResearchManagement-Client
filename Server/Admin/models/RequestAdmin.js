@@ -1,22 +1,18 @@
 const mongoose = require("mongoose");
 
 const PostSchema = mongoose.Schema({
-  groupid: {
+  name: {
     type: String,
     required: true,
   },
-  date: {
+  requestdocument: {
     type: String,
     required: true,
   },
-  time: {
-    type: String,
-    required: true,
-  },
-  allocatedpanel: {
+  response: {
     type: String,
     required: true,
   },
 });
 
-module.exports = mongoose.model("Schedule", PostSchema);
+module.exports = mongoose.model("RequestManagement", PostSchema);

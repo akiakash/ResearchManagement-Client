@@ -66,15 +66,22 @@ function ViewDocuments() {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
-        Download
-        </Button>
+      <Button
+    style={{
+        borderRadius: 30,
+        backgroundColor: "#FF715B",
+        padding: "5px 20px",
+        fontSize: "15px"
+    }}
+    variant="contained"
+    >
+    Download
+</Button>
       </CardActions>
     </Card>
 
 
-    <br></br>  
-    <br></br> 
+    0px 
     <Card sx={{ maxWidth: 330 ,display:'inline-block'}}>
       <CardActionArea>
         <CardMedia
@@ -94,9 +101,17 @@ function ViewDocuments() {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
-          Download
-        </Button>
+      <Button
+    style={{
+        borderRadius: 30,
+        backgroundColor: "#FF715B",
+        padding: "5px 20px",
+        fontSize: "15px"
+    }}
+    variant="contained"
+    >
+    Download
+</Button>
       </CardActions>
     </Card>
      

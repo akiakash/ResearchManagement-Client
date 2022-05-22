@@ -91,7 +91,6 @@ function StudentSubmition() {
 
       sx={{
         display: 'flex',
-     
         flexWrap: 'wrap',
         '& > :not(style)': {
           m: 1,

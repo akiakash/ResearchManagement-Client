@@ -75,16 +75,18 @@ function RequstedStatus() {
               sx={{
                 height: 500,
                 width: 500,
-                maxHeight: { xs: 200, md: 150 },
-                maxWidth: { xs: 200, md: 150 },
               }}
-              alt="image"
-              src="./round.png"
+              alt= "image"
+              src= "./round.png"
+            
             />
+              
+            
             <br></br>
-            <label>Group ID</label>
+
             <label>xxxxxxx</label>
             <br></br>
+              
           </div>
           <TableContainer component={Paper}>
             <Table sx={{ minWidth: 700 }} aria-label="customized table">

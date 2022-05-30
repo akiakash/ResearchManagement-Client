@@ -1,18 +1,13 @@
-import React, { useState } from "react";
+import GlobalStyles from "./globalStyles";
+import Dashboard from "./pages/Dashboard";
 
-const App = () => {
-  const [counter, setCounter] = useState(0);
-
-  const increment = () => {
-    setCounter(counter + 1);
-  };
+function App() {
   return (
     <div>
-      This was made from Scratch! Also hello world!
-      <button onClick={increment}>Increment</button>
-      {counter}
+      <GlobalStyles />
+      <Dashboard />
     </div>
   );
-};
+}
 
 export default App;

@@ -14,10 +14,7 @@ export default function NavBar() {
       <S.Container>
         <S.Profile>
           <S.ProfileImg></S.ProfileImg>
-          <S.ProfileInfo>
-            <h6 className="text-base">Metacare</h6>
-            <S.Email className="text-sm">adeyinka@metacare.app</S.Email>
-          </S.ProfileInfo>
+          <S.ProfileInfo></S.ProfileInfo>
         </S.Profile>
         <S.List>
           <S.ListItem>
@@ -28,57 +25,39 @@ export default function NavBar() {
             <img src={Arrow} alt="arrow" />
           </S.ListItem>
           <S.ListItem>
-            <S.Item href="#">
+            <S.Item href="/staffmanagement">
               <S.ItemIcon src={Shape} alt="shape" />
-              Knowledge Base
+              Staff Management
             </S.Item>
             <img src={Arrow} alt="arrow" />
           </S.ListItem>
           <S.ListItem>
-            <S.Item href="#">
+            <S.Item href="/schedulemanagement">
               <S.ItemIcon src={Shape} alt="shape" />
-              Train SAM
+              Schedule Management
             </S.Item>
             <img src={Arrow} alt="arrow" />
           </S.ListItem>
           <S.ListItem>
-            <S.Item href="#">
+            <S.Item href="/marksmanagement">
               <S.ItemIcon src={Calendar} alt="calendar" />
-              Agent Inbox
+              Marks Management
             </S.Item>
             <img src={Arrow} alt="arrow" />
           </S.ListItem>
           <S.ListItem>
-            <S.Item href="#">
+            <S.Item href="/requestsmanagement">
               <S.ItemIcon src={Time} alt="time" />
-              Help Center
+              Requests Management
             </S.Item>
             <img src={Arrow} alt="arrow" />
           </S.ListItem>
-
-          <S.ListItem className="dropdown">
-            <S.Item href="#" className="active">
-              <S.ItemIcon src={Message} alt="message" />
-              Analytics
+          <S.ListItem>
+            <S.Item href="/documentmanagement">
+              <S.ItemIcon src={Time} alt="time" />
+              Document Management
             </S.Item>
-            <img src={ArrowDown} alt="arrow" />
-
-            <S.SubList>
-              <S.SubListItem>
-                <S.SubItem href="#" className="active">
-                  Teams
-                </S.SubItem>
-              </S.SubListItem>
-              <S.SubListItem>
-                <S.SubItem href="#">Knowledge Base</S.SubItem>
-              </S.SubListItem>
-              <S.SubListItem>
-                <S.SubItem href="#">Training SAM</S.SubItem>
-              </S.SubListItem>
-              <S.SubListItem>
-                <S.SubItem href="#">Help Center</S.SubItem>
-              </S.SubListItem>
-            </S.SubList>
+            <img src={Arrow} alt="arrow" />
           </S.ListItem>
         </S.List>
       </S.Container>

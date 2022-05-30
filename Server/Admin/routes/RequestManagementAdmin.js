@@ -17,8 +17,6 @@ router.get("/", async (req, res) => {
 
 router.post("/", async (req, res) => {
   const requests = new Requests({
-    name: req.body.name,
-    requestdocument: req.body.requestdocument,
     response: req.body.response,
   });
 
@@ -62,8 +60,6 @@ router.patch("/:requestsId", async (req, res) => {
       { _id: req.params.requestsId },
       {
         $set: {
-          name: req.body.name,
-          requestdocument: req.body.requestdocument,
           response: req.body.response,
         },
       }

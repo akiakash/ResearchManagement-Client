@@ -24,6 +24,7 @@ const DocumentManagement = require("./Admin/routes/DocumentManagement");
 const TopicManagement = require("./Client/routes/TopicManagement");
 const RequestManagement = require("./Client/routes/RequestManagement");
 const RequestManagementAdmin = require("./Admin/routes/RequestManagementAdmin");
+const Request = require("./Client/routes/RequestManagement");
 
 // api paths
 app.use("/UserManagement", UserManagement);
@@ -34,6 +35,7 @@ app.use("/DocumentManagement", DocumentManagement);
 app.use("/TopicManagement", TopicManagement);
 app.use("/RequestManagement", RequestManagement);
 app.use("/RequestManagementAdmin", RequestManagementAdmin);
+app.use("/Request", Request);
 
 app.get("/", (req, res) => {
   res.send("We are on Home");

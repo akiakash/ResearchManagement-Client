@@ -5,7 +5,6 @@ import Arrow from "../../assets/icons/arrow-down-b.png";
 import Button from "../UI/Button";
 import Graph from "../UI/Graph";
 import Time from "../UI/Time";
-import LineChart from "../LineChart";
 
 export default function Efficiency() {
   const graphData = [
@@ -231,13 +230,7 @@ export default function Efficiency() {
             graphHeader={data.title}
             percentage={data.percentage}
             priority={data.color}
-          >
-            <LineChart
-              defaultColors={[data.color]}
-              title={data.title}
-              graph={data.graph}
-            />
-          </Graph>
+          ></Graph>
           <S.TimeWrap>
             {data.others.map((item, index) => (
               <Time title={item.title} time={item.time} key={`time ${index}`} />

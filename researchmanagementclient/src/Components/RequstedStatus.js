@@ -76,15 +76,11 @@ function RequstedStatus() {
                 height: 500,
                 width: 500,
 
-                maxHeight: { xs: 200, md: 150 },
-                maxWidth: { xs: 200, md: 150 },
-              }}
-              style={{ marginLeft: "40%" }}
               alt="image"
               src="./round.png"
             />
             <br></br>
-            <label style={{ marginLeft: "42%" }}>Group ID</label>
+
             <label>xxxxxxx</label>
             <br></br>
           </div>

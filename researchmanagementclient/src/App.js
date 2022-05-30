@@ -12,6 +12,8 @@ import RegisterTopic from "./Components/RegisterTopic";
 import RequstedStatus from "./Components/RequstedStatus";
 import FindMembers from "./Components/FindMembers";
 import ViewDocuments from "./Components/ViewDocuments";
+import StudentSubmition from "./Components/StudentSubmition";
+import ViewMarks from "./Components/Marks_Management'/ViewMarks";
 function App() {
   return (
     // <div className="App">
@@ -26,8 +28,8 @@ function App() {
     // </div>
     <>
       
-      <ViewDocuments />
-      {/* <RegisterTopic /> */}
+   
+      <ViewMarks />
     </>
   );
 }

@@ -9,9 +9,8 @@ import Footer from "./Bars/Footer";
 import Home1 from "./Home/Home1";
 import MainHome from "./Home/MainHome";
 import RegisterTopic from "./Components/RegisterTopic";
-import RequstedStatus from "./Components/RequstedStatus";
-import FindMembers from "./Components/FindMembers";
-import ViewDocuments from "./Components/ViewDocuments";
+
+
 function App() {
   return (
     // <div className="App">
@@ -25,8 +24,7 @@ function App() {
     //   </BrowserRouter>
     // </div>
     <>
-      
-      <ViewDocuments />
+
       {/* <RegisterTopic /> */}
     </>
   );

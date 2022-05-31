@@ -1,7 +1,7 @@
 const express = require("express");
 const req = require("express/lib/request");
 const router = express.Router();
-const Requests = require("../models/Request");
+const Requests = require("../models/Request"); 
 
 //Get all Data
 router.get("/", async (req, res) => {

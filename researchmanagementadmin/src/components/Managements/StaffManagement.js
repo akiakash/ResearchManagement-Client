@@ -42,6 +42,14 @@ function StaffManagement() {
           height: "400px",
         }}
       >
+        <a href="/allstaffs">
+          <Button
+            variant="contained"
+            style={{ marginLeft: "85%", marginTop: "2%" }}
+          >
+            View Staffs
+          </Button>
+        </a>
         <Box
           component="form"
           sx={{

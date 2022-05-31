@@ -59,6 +59,13 @@ export default function NavBar() {
             </S.Item>
             <img src={Arrow} alt="arrow" />
           </S.ListItem>
+          <S.ListItem>
+            <S.Item href="/studentmanagement">
+              <S.ItemIcon src={Time} alt="time" />
+              Student Management
+            </S.Item>
+            <img src={Arrow} alt="arrow" />
+          </S.ListItem>
         </S.List>
       </S.Container>
     </S.Wrapper>

@@ -21,13 +21,10 @@ const PostSchema = mongoose.Schema({
     type: String,
     required: true,
   },
-  response: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      trim: true,
-      ref: "RequestManagement",
-    },
-  ],
+  response: {
+    type: String,
+    required: true,
+  },
 });
 
 module.exports = mongoose.model("Request", PostSchema);

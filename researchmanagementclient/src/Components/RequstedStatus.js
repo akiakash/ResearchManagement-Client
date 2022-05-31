@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { Button, Card } from "@mui/material";
@@ -11,6 +11,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
+import axios from "axios";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -36,14 +37,32 @@ function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein };
 }
 
-const rows = [
-  createData("dhanu", 1, 1, 1),
-  createData("dhanu", 1, 1, 1),
-  createData("dhanu", 1, 1, 1),
-  createData("dhanu", 1, 1, 1),
-  createData("dhanu", 1, 1, 1),
-];
+// const rows = [
+//   createData("dhanu", 1, 1, 1),
+//   createData("dhanu", 1, 1, 1),
+//   createData("dhanu", 1, 1, 1),
+//   createData("dhanu", 1, 1, 1),
+//   createData("dhanu", 1, 1, 1),
+// ];
 function RequstedStatus() {
+  const [requests, setRequest] = useState([]);
+
+  const getRequest = () => {
+    axios
+      .get(`http://localhost:3000/Request`)
+      .then((res) => {
+        // console.log(res.data);
+        setRequest(res.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  useEffect(() => {
+    getRequest();
+  }, [requests]);
+
   return (
     <div>
       <h1 style={{ textAlign: "center" }}> Requsted Status</h1>
@@ -70,45 +89,36 @@ function RequstedStatus() {
             <b> </b>
           </h1>
           <div>
-            <Box
-              component="img"
-              sx={{
-                height: 100,
-                width: 100,
-              }}
-              alt= "image"
-              src= "./round.png"
-            
-            />
-              
-            
-            <br></br>
 
-            <label>xxxxxxx</label>
-            <br></br>
-              
           </div>
+
           <TableContainer component={Paper}>
             <Table sx={{ minWidth: 700 }} aria-label="customized table">
               <TableHead>
                 <TableRow>
-                  <StyledTableCell>Name </StyledTableCell>
-                  <StyledTableCell align="right">Potition</StyledTableCell>
-                  <StyledTableCell align="right">Status&nbsp;</StyledTableCell>
-                  <StyledTableCell align="right">Action&nbsp;</StyledTableCell>
+                  <StyledTableCell>Research Area </StyledTableCell>
+                  <StyledTableCell align="right">Document</StyledTableCell>
+                  <StyledTableCell align="right">
+                    Supervisor Name
+                  </StyledTableCell>
+                  <StyledTableCell align="right">Response </StyledTableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
-                {rows.map((row) => (
-                  <StyledTableRow key={row.name}>
+                {requests.map((item) => (
+                  <StyledTableRow>
                     <StyledTableCell component="th" scope="row">
-                      {row.name}
+                      {item.researcharea}
                     </StyledTableCell>
                     <StyledTableCell align="right">
-                      {row.calories}
+                      {item.document}
                     </StyledTableCell>
-                    <StyledTableCell align="right">{row.fat}</StyledTableCell>
-                    <StyledTableCell align="right">{row.carbs}</StyledTableCell>
+                    <StyledTableCell align="right">
+                      {item.supervisorname}
+                    </StyledTableCell>
+                    <StyledTableCell align="right">
+                      {item.response}
+                    </StyledTableCell>
                   </StyledTableRow>
                 ))}
               </TableBody>

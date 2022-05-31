@@ -10,6 +10,14 @@ import ScheduleManagement from "components/Managements/ScheduleManagement";
 import MarksManagement from "components/Managements/MarksManagement";
 import RequestsManagement from "components/Managements/RequestsManagement";
 import DocumentManagement from "components/Managements/DocumentManagement";
+import AddResponse from "components/Managements/RequestEdit/AddResponse";
+import ViewStaffs from "components/Managements/Staffs/ViewStaffs";
+import EditStaff from "components/Managements/Staffs/EditStaff";
+import ViewSchedule from "components/Managements/Schedule/ViewSchedule";
+import EditSchedule from "components/Managements/Schedule/EditSchedule";
+import ViewMarks from "components/Managements/Marks/ViewMarks";
+import EditMarks from "components/Managements/Marks/EditMarks";
+import StudentManagement from "components/Managements/StudentManagement";
 
 export default function Dashboard() {
   return (
@@ -37,6 +45,14 @@ export default function Dashboard() {
               path="/documentmanagement"
               element={<DocumentManagement />}
             />
+            <Route path="/studentmanagement" element={<StudentManagement />} />
+            <Route path="/AddResponse" element={<AddResponse />} />
+            <Route path="/allstaffs" element={<ViewStaffs />} />
+            <Route path="/editStaff" element={<EditStaff />} />
+            <Route path="/viewSchedule" element={<ViewSchedule />} />
+            <Route path="/editSchedule" element={<EditSchedule />} />
+            <Route path="/viewmarks" element={<ViewMarks />} />
+            <Route path="/editMarks" element={<EditMarks />} />
           </Routes>
         </BrowserRouter>
       </S.Main>

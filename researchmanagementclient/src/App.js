@@ -9,7 +9,8 @@ import Footer from "./Bars/Footer";
 import Home1 from "./Home/Home1";
 import MainHome from "./Home/MainHome";
 import RegisterTopic from "./Components/RegisterTopic";
-
+import Request_Supervisor from "./Components/Request_Supervisor";
+import RequestedStatus from "./Components/RequstedStatus";
 
 function App() {
   return (
@@ -24,8 +25,9 @@ function App() {
     //   </BrowserRouter>
     // </div>
     <>
-
       {/* <RegisterTopic /> */}
+      {/* <Request_Supervisor /> */}
+      <RequestedStatus />
     </>
   );
 }

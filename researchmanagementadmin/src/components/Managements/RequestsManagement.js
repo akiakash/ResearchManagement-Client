@@ -6,19 +6,29 @@ import { Button } from "@mui/material";
 function RequestsManagement() {
   const [requests, setRequest] = useState([]);
   const [responses, setResponses] = useState("");
+  const [response, setResponse] = useState("");
 
-  axios
-    .get(`http://localhost:3000/Request`)
-    .then((res) => {
-      // console.log(res.data);
-      setRequest(res.data);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+  const getRequest = () => {
+    axios
+      .get(`http://localhost:3000/Request`)
+      .then((res) => {
+        // console.log(res.data);
+        setRequest(res.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
-  function addresponse() {
-    axios.post(``);
+  useEffect(() => {
+    getRequest();
+  }, [requests]);
+
+  function addResponse(_id) {
+    console.log("Request" + _id);
+    window.sessionStorage.setItem("RequestID", _id);
+    window.location("/AddResponse");
+    console.log("RequestID");
   }
 
   return (
@@ -37,16 +47,17 @@ function RequestsManagement() {
 
             <td style={{ border: "1px solid #dddddd" }}>{item.groupid}</td>
             <td style={{ border: "1px solid #dddddd" }}>{item.document}</td>
-            <td style={{ border: "1px solid #dddddd" }}>
-              <select name="cars" id="cars">
-                <option value="accepted">Select</option>
-                <option value="accepted">Accepted</option>
-                <option value="declined">Declined</option>
-                <option value="processing">PRocessing</option>
-              </select>
-            </td>
+            <td style={{ border: "1px solid #dddddd" }}>{item.response}</td>
             <td>
-              <Button variant="contained">Submit</Button>
+              <a href="/AddResponse">
+                <Button
+                  variant="contained"
+                  type="submit"
+                  onClick={() => addResponse(item._id)}
+                >
+                  View
+                </Button>
+              </a>
             </td>
           </tr>
         ))}

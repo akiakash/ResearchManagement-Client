@@ -36,6 +36,14 @@ function ScheduleManagement() {
         height: "400px",
       }}
     >
+      <a href="viewSchedule">
+        <Button
+          variant="contained"
+          style={{ marginLeft: "80%", marginTop: "3%" }}
+        >
+          View Shedules
+        </Button>
+      </a>
       <Box
         component="form"
         sx={{

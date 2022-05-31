@@ -37,6 +37,14 @@ function MarksManagement() {
           height: "400px",
         }}
       >
+        <a href="/viewmarks">
+          <Button
+            variant="contained"
+            style={{ marginLeft: "85%", marginTop: "3%" }}
+          >
+            View Marks
+          </Button>{" "}
+        </a>
         <Box
           component="form"
           sx={{
@@ -49,20 +57,20 @@ function MarksManagement() {
           <h1 style={{ marginBottom: "15px" }}> Add Marks</h1>
           <div>
             <TextField
-              label="First Name"
+              label="Group ID"
               onChange={(e) => setGroupid(e.target.value)}
             />
             <TextField
-              label="Last Name"
+              label="Student ID"
               onChange={(e) => setStudentid(e.target.value)}
             />
 
             <TextField
-              label="Department"
+              label="Marks"
               onChange={(e) => setMarks(e.target.value)}
             />
             <TextField
-              label="Qualification"
+              label="Grade"
               onChange={(e) => setGrade(e.target.value)}
             />
           </div>

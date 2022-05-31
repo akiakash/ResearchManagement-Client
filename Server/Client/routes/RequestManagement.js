@@ -22,6 +22,7 @@ router.post("/", async (req, res) => {
     cosupervisorname: req.body.cosupervisorname,
     groupid: req.body.groupid,
     document: req.body.document,
+    response: req.body.response,
   });
 
   try {
@@ -69,6 +70,7 @@ router.patch("/:requestsId", async (req, res) => {
           cosupervisorname: req.body.cosupervisorname,
           groupid: req.body.groupid,
           document: req.body.document,
+          response: req.body.response,
         },
       }
     );

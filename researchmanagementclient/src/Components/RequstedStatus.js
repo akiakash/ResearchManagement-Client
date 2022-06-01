@@ -88,9 +88,7 @@ function RequstedStatus() {
           <h1 style={{ fontFamily: "Roboto", textAlign: "center" }}>
             <b> </b>
           </h1>
-          <div>
-
-          </div>
+          <div></div>
 
           <TableContainer component={Paper}>
             <Table sx={{ minWidth: 700 }} aria-label="customized table">

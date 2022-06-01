@@ -11,18 +11,20 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
+import { getToken, removeUserSession, getUser } from "../Utils/Common";
+import { useHistory } from "react-router-dom";
 
-const pages = [
-  "Home",
-  "Product",
-  "Services",
-  "Contact us",
-  "Login",
-  "Register",
-];
+import { Link } from "react-router-dom";
+const pages = ["Home", "Product", "Services", "Contact us", "Logout"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const ResponsiveAppBar = () => {
+  const user = getUser();
+  const history = useHistory();
+  const handleLogout = () => {
+    removeUserSession();
+    history.push("/SignIn");
+  };
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -115,16 +117,21 @@ const ResponsiveAppBar = () => {
             }}
             style={{ fontFamily: "Poppins" }}
           >
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "black" }}
-                style={{ marginRight: "10px" }}
-              >
-                {page}
-              </Button>
-            ))}
+            <Button
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, color: "black" }}
+              style={{ marginRight: "10px" }}
+            >
+              Product
+            </Button>
+
+            <Button
+              onClick={logout}
+              sx={{ my: 2, color: "black" }}
+              style={{ marginRight: "10px" }}
+            >
+              Logout
+            </Button>
           </Box>
 
           {/* <Box sx={{ flexGrow: 0 }}>

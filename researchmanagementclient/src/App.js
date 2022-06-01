@@ -9,25 +9,22 @@ import Footer from "./Bars/Footer";
 import Home1 from "./Home/Home1";
 import MainHome from "./Home/MainHome";
 import RegisterTopic from "./Components/RegisterTopic";
+import RequestedStatus from "./Components/RequstedStatus";
+import Logout from "./Components/Logout";
 
 function App() {
   return (
-    // <div className="App">
-    //   <BrowserRouter>
-    //     <Routes>
-    //       <Route path="/" element={<SignInSide />} />
-    //       <Route path="/signup" element={<SignUpSide />} />
-    //       <Route path="/signup" element={<SignUpSide />} />
-    //       <Route path="/aboutus" element={<AboutUs />} />
-    //     </Routes>
-    //   </BrowserRouter>
-    // </div>
-    <>
-
-      {/* <RegisterTopic /> */}
-      {/* <Request_Supervisor /> */}
-      <RequestedStatus />
-    </>
+    <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<SignInSide />} />
+          <Route path="/signup" element={<SignUpSide />} />
+          <Route path="/signup" element={<SignUpSide />} />
+          <Route path="/mainhome" element={<MainHome />} />
+          <Route path="/logout" element={<Logout />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 

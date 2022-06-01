@@ -18,6 +18,8 @@ import EditSchedule from "components/Managements/Schedule/EditSchedule";
 import ViewMarks from "components/Managements/Marks/ViewMarks";
 import EditMarks from "components/Managements/Marks/EditMarks";
 import StudentManagement from "components/Managements/StudentManagement";
+import ViewStudents from "components/Managements/Student/ViewStudents";
+import EditStudent from "components/Managements/Student/EditStudent";
 
 export default function Dashboard() {
   return (
@@ -53,6 +55,8 @@ export default function Dashboard() {
             <Route path="/editSchedule" element={<EditSchedule />} />
             <Route path="/viewmarks" element={<ViewMarks />} />
             <Route path="/editMarks" element={<EditMarks />} />
+            <Route path="/viewstudents" element={<ViewStudents />} />
+            <Route path="/editstudent" element={<EditStudent />} />
           </Routes>
         </BrowserRouter>
       </S.Main>

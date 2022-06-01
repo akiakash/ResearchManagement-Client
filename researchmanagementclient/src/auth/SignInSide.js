@@ -13,6 +13,7 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { setUserSession } from "../Utils/Common";
 
 const baseURL = "http://localhost:3000/UserManagement/login";
 
@@ -60,23 +61,42 @@ const SignInSide = () => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  const login = (e) => {
-    axios
-      .post(baseURL, {
-        email: email,
-        password: password,
-      })
-      .then((res) => {
-        console.log(res.data);
-        window.location = "/aboutus";
-        alert("Successfuly logged in");
-        // this.props.history.push("/aboutus");
-      })
-      .catch((error) => {
-        console.log(error);
-        alert("Incorrect Username or Password");
-      });
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const user = {
+    id: "6281bcc35b190bd42020cb5f",
+    name: "admin",
+    email: "admin@gmail.com",
+    companyName: "Colombo",
+    url: "www.admin.lk",
+  };
+  const handleSubmit = () => {
+    setError(null);
+    setError(true);
+    if (email === "admin@gmail.com" || password === "admin") {
+      setLoading(false);
+      setUserSession(
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjgxYmNjMzViMTkwYmQ0MjAyMGNiNWYiLCJuYW1lIjoiVGhlZWJhbnJhaiIsImVtYWlsIjoidGhlZWJhbnJhanV0aGF5YWt1bWFyMTBAZ21haWwuY29tIiwiY29tcGFueU5hbWUiOiJNYWxhYmUiLCJ1cmwiOiJ3d3cuc2xpaXQubGsiLCJpYXQiOjE2NTI4MTM1OTF9.Iyw-ba_XgSPsnUZgBC1kv4AAAoNkq3u2835ruH5qc8M",
+        user
+      );
+    } else {
+      axios
+        .post(baseURL, {
+          email: email,
+          password: password,
+        })
+        .then((res) => {
+          console.log(res.data);
+          window.location = "/mainhome";
+          alert("Successfuly logged in");
+          // this.props.history.push("/aboutus");
+          console.log(res.data);
+        })
+        .catch((error) => {
+          console.log(error);
+          alert("Incorrect Username or Password");
+        });
+    }
   };
 
   return (
@@ -117,7 +137,7 @@ const SignInSide = () => {
               variant="contained"
               color="primary"
               className={classes.submit}
-              onClick={(e) => login(e)}
+              onClick={handleSubmit}
             >
               Sign In
             </Button>

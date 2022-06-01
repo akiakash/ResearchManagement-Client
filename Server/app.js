@@ -27,7 +27,7 @@ const RequestManagement = require("./Client/routes/RequestManagement");
 const Request = require("./Client/routes/RequestManagement");
 const Members = require("./Client/routes/MemberManagement");
 const Students = require("./Client/routes/StudentManagement");
-const Student = require("./Admin/routes/StudentManagement");
+const StudentManagement = require("./Admin/routes/StudentManagement");
 
 // api paths
 app.use("/UserManagement", UserManagement);
@@ -41,8 +41,7 @@ app.use("/RequestManagement", RequestManagement);
 app.use("/Request", Request);
 app.use("/Members", Members);
 app.use("/Student", Students);
-app.use("/StudentManagement", Student);
-
+app.use("/StudentManagement", StudentManagement);
 
 app.get("/", (req, res) => {
   res.send("We are on Home");

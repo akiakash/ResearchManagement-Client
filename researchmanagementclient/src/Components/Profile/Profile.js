@@ -22,11 +22,11 @@ const ResponsiveAppBar = () => {
   };
 
   const membermanagement = () => {
-    window.location = "/membermanagement";
+    window.location = "/topicmanagement";
   };
 
   const topicmanagement = () => {
-    window.location = "/topicmanagement";
+    window.location = "/membermanagement";
   };
 
   const requestmanagement = () => {

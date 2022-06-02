@@ -21,6 +21,7 @@ import MemberManagement from "./Components/Profile/MemberManagement";
 import RequestManagement from "./Components/Profile/RequestManagement";
 import TopicManagement from "./Components/Profile/TopicManagement";
 import SubmissionManagement from "./Components/Profile/SubmissionManagement";
+import EditRegistedTopic from "./Components/Profile/EditRegistedTopic";
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
             path="/submissionmanagement"
             element={<SubmissionManagement />}
           />
+          <Route path="/memberedit" element={<EditRegistedTopic />} />
 
           <Route path="/profile" element={<Profile />} />
           <Route path="/logout" element={<Logout />} />

@@ -10,7 +10,7 @@ import {
 
 const Footer = () => {
   return (
-    <Box>
+    <Box style={{ paddingTop: "5%" }}>
       {/* <h1 style={{ color: "green", textAlign: "center", marginTop: "-50px" }}>
         GeeksforGeeks: A Computer Science Portal for Geeks
       </h1> */}

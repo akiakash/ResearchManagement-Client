@@ -12,7 +12,6 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import { getToken, removeUserSession, getUser } from "../Utils/Common";
-import { useHistory } from "react-router-dom";
 
 import { Link } from "react-router-dom";
 const pages = ["Home", "Product", "Services", "Contact us", "Logout"];
@@ -20,11 +19,32 @@ const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const ResponsiveAppBar = () => {
   const user = getUser();
-  const history = useHistory();
+
   const handleLogout = () => {
     removeUserSession();
-    history.push("/SignIn");
+    window.location = "/";
   };
+
+  const registerform = () => {
+    window.location = "/registerform";
+  };
+
+  const registertopic = () => {
+    window.location = "/registertopic";
+  };
+
+  const request = () => {
+    window.location = "/request";
+  };
+
+  const studentsubmission = () => {
+    window.location = "/studentsubmission";
+  };
+
+  const viewmarks = () => {
+    window.location = "/viewmarks";
+  };
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -118,15 +138,50 @@ const ResponsiveAppBar = () => {
             style={{ fontFamily: "Poppins" }}
           >
             <Button
+              onClick={registerform}
+              sx={{ my: 2, color: "black" }}
+              style={{ marginRight: "10px" }}
+            >
+              Register Team
+            </Button>
+            <Button
+              onClick={registertopic}
+              sx={{ my: 2, color: "black" }}
+              style={{ marginRight: "10px" }}
+            >
+              Register Topic
+            </Button>
+            <Button
+              onClick={request}
+              sx={{ my: 2, color: "black" }}
+              style={{ marginRight: "10px" }}
+            >
+              Request
+            </Button>
+            <Button
+              onClick={studentsubmission}
+              sx={{ my: 2, color: "black" }}
+              style={{ marginRight: "10px" }}
+            >
+              Submission
+            </Button>
+            <Button
+              onClick={viewmarks}
+              sx={{ my: 2, color: "black" }}
+              style={{ marginRight: "10px" }}
+            >
+              Marks
+            </Button>
+            <Button
               onClick={handleCloseNavMenu}
               sx={{ my: 2, color: "black" }}
               style={{ marginRight: "10px" }}
             >
-              Product
+              Calender
             </Button>
 
             <Button
-              onClick={logout}
+              onClick={handleLogout}
               sx={{ my: 2, color: "black" }}
               style={{ marginRight: "10px" }}
             >

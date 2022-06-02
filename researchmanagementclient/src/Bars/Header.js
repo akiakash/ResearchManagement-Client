@@ -77,7 +77,9 @@ const ResponsiveAppBar = () => {
             component="div"
             sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
           >
-            <img src="./EDUvation.png"></img>
+            <a href="/home">
+              <img src="./EDUvation.png"></img>
+            </a>
           </Typography>
 
           <Box

@@ -22,6 +22,10 @@ import RequestManagement from "./Components/Profile/RequestManagement";
 import TopicManagement from "./Components/Profile/TopicManagement";
 import SubmissionManagement from "./Components/Profile/SubmissionManagement";
 import EditRegistedTopic from "./Components/Profile/EditRegistedTopic";
+import EditTopicManagement from "./Components/Profile/EditTopicManagement";
+import EditRequestManagement from "./Components/Profile/EditRequestManagement";
+//import SubmissionManagement from "./Components/Profile/SubmissionManagement";
+import EditSubmitionManagement from "./Components/Profile/EditSubmitionManagement";
 
 function App() {
   return (
@@ -47,6 +51,11 @@ function App() {
             element={<SubmissionManagement />}
           />
           <Route path="/memberedit" element={<EditRegistedTopic />} />
+          <Route path="/editTopic" element={<EditTopicManagement />} />
+          <Route path="/editRequestmanagement" element={<EditRequestManagement />} />
+          <Route path="/SubmitionManagement" element={<EditSubmitionManagement />} />
+
+
 
           <Route path="/profile" element={<Profile />} />
           <Route path="/logout" element={<Logout />} />

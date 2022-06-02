@@ -11,42 +11,30 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import { getToken, removeUserSession, getUser } from "../Utils/Common";
 
-import { Link } from "react-router-dom";
 const pages = ["Home", "Product", "Services", "Contact us", "Logout"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const ResponsiveAppBar = () => {
-  const user = getUser();
-
   const handleLogout = () => {
     removeUserSession();
     window.location = "/";
   };
 
-  const registerform = () => {
-    window.location = "/registerform";
+  const membermanagement = () => {
+    window.location = "/membermanagement";
   };
 
-  const registertopic = () => {
-    window.location = "/registertopic";
+  const topicmanagement = () => {
+    window.location = "/topicmanagement";
   };
 
-  const request = () => {
-    window.location = "/request";
+  const requestmanagement = () => {
+    window.location = "/requestmanagement";
   };
 
-  const studentsubmission = () => {
-    window.location = "/studentsubmission";
-  };
-
-  const viewmarks = () => {
-    window.location = "/viewmarks";
-  };
-
-  const profile = () => {
-    window.location = "/profile";
+  const submissionmanagement = () => {
+    window.location = "/submissionmanagement";
   };
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -75,17 +63,6 @@ const ResponsiveAppBar = () => {
     >
       <Container maxWidth="xl" style={{ fontFamily: "Poppins" }}>
         <Toolbar disableGutters>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
-          >
-            <a href="/home">
-              <img src="./EDUvation.png"></img>
-            </a>
-          </Typography>
-
           <Box
             style={{ fontFamily: "Poppins" }}
             sx={{
@@ -128,78 +105,41 @@ const ResponsiveAppBar = () => {
               ))}
             </Menu>
           </Box>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
-          >
-            LOGO
-          </Typography>
+
           <Box
             sx={{
               flexGrow: 1,
               display: { xs: "none", md: "flex", justifyContent: "flex-end" },
             }}
-            style={{ fontFamily: "Poppins" }}
+            style={{ fontFamily: "Poppins ", marginRight: "20%" }}
           >
             <Button
-              onClick={registerform}
+              onClick={membermanagement}
               sx={{ my: 2, color: "black" }}
               style={{ marginRight: "10px" }}
             >
-              Register Team
+              Team Management
             </Button>
             <Button
-              onClick={registertopic}
+              onClick={topicmanagement}
               sx={{ my: 2, color: "black" }}
               style={{ marginRight: "10px" }}
             >
-              Register Topic
+              Topic management
             </Button>
             <Button
-              onClick={request}
+              onClick={requestmanagement}
               sx={{ my: 2, color: "black" }}
               style={{ marginRight: "10px" }}
             >
-              Request
+              Request Management
             </Button>
             <Button
-              onClick={studentsubmission}
+              onClick={submissionmanagement}
               sx={{ my: 2, color: "black" }}
               style={{ marginRight: "10px" }}
             >
-              Submission
-            </Button>
-            <Button
-              onClick={viewmarks}
-              sx={{ my: 2, color: "black" }}
-              style={{ marginRight: "10px" }}
-            >
-              Marks
-            </Button>
-            <Button
-              onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: "black" }}
-              style={{ marginRight: "10px" }}
-            >
-              Calender
-            </Button>
-
-            <Button
-              onClick={profile}
-              sx={{ my: 2, color: "black" }}
-              style={{ marginRight: "10px" }}
-            >
-              Profile
-            </Button>
-
-            <Button
-              onClick={handleLogout}
-              sx={{ my: 2, color: "black" }}
-              style={{ marginRight: "10px" }}
-            >
-              Logout
+              Submission Management
             </Button>
           </Box>
 

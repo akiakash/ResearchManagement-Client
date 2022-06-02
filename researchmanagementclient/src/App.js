@@ -16,6 +16,11 @@ import Header from "./Bars/Header";
 import Request_Supervisor from "./Components/Request_Supervisor";
 import StudentSubmition from "./Components/StudentSubmition";
 import ViewMarks from "./Components/Marks_Management'/ViewMarks";
+import Profile from "./Components/Profile/Profile";
+import MemberManagement from "./Components/Profile/MemberManagement";
+import RequestManagement from "./Components/Profile/RequestManagement";
+import TopicManagement from "./Components/Profile/TopicManagement";
+import SubmissionManagement from "./Components/Profile/SubmissionManagement";
 
 function App() {
   return (
@@ -33,6 +38,15 @@ function App() {
           <Route path="/request" element={<Request_Supervisor />} />
           <Route path="/studentsubmission" element={<StudentSubmition />} />
           <Route path="/viewmarks" element={<ViewMarks />} />
+          <Route path="/membermanagement" element={<MemberManagement />} />
+          <Route path="/requestmanagement" element={<RequestManagement />} />
+          <Route path="/topicmanagement" element={<TopicManagement />} />
+          <Route
+            path="/submissionmanagement"
+            element={<SubmissionManagement />}
+          />
+
+          <Route path="/profile" element={<Profile />} />
           <Route path="/logout" element={<Logout />} />
         </Routes>
       </BrowserRouter>

@@ -28,6 +28,7 @@ import EditRequestManagement from "./Components/Profile/EditRequestManagement";
 import EditSubmitionManagement from "./Components/Profile/EditSubmitionManagement";
 import RequstedStatus from "./Components/RequstedStatus";
 import VivaSchedules from "./Components/VivaSchedules";
+import Staffs from "./Components/Staffs";
 
 function App() {
   return (
@@ -58,6 +59,7 @@ function App() {
             path="/editRequestmanagement"
             element={<EditRequestManagement />}
           />
+          <Route path="/viewstaffs" element={<Staffs />} />
           <Route
             path="/SubmitionManagement"
             element={<EditSubmitionManagement />}

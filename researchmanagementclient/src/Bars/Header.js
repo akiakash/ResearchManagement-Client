@@ -47,6 +47,9 @@ const ResponsiveAppBar = () => {
   const vivaSchedule = () => {
     window.location = "/vivaschedule";
   };
+  const viewStaffs = () => {
+    window.location = "/viewStaffs";
+  };
 
   const profile = () => {
     window.location = "/profile";
@@ -189,11 +192,11 @@ const ResponsiveAppBar = () => {
               Viva Schedules
             </Button>
             <Button
-              onClick={handleCloseNavMenu}
+              onClick={viewStaffs}
               sx={{ my: 2, color: "black" }}
               style={{ marginRight: "10px" }}
             >
-              Calender
+              Staffs
             </Button>
 
             <Button

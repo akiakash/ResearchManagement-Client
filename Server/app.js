@@ -51,7 +51,7 @@ app.get("/", (req, res) => {
 //connection to mongoDB
 mongoose.connect(
   "mongodb+srv://akash:Akiakash1@cluster0.goear.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
-  () => console.log("Successfully Fucked Up")
+  () => console.log("Successfully connected ")
 );
 
 //Server host

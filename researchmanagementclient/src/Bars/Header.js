@@ -44,6 +44,9 @@ const ResponsiveAppBar = () => {
   const viewmarks = () => {
     window.location = "/viewmarks";
   };
+  const vivaSchedule = () => {
+    window.location = "/vivaschedule";
+  };
 
   const profile = () => {
     window.location = "/profile";
@@ -177,6 +180,13 @@ const ResponsiveAppBar = () => {
               style={{ marginRight: "10px" }}
             >
               Marks
+            </Button>
+            <Button
+              onClick={vivaSchedule}
+              sx={{ my: 2, color: "black" }}
+              style={{ marginRight: "10px" }}
+            >
+              Viva Schedules
             </Button>
             <Button
               onClick={handleCloseNavMenu}

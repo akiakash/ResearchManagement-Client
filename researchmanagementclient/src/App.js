@@ -27,6 +27,7 @@ import EditRequestManagement from "./Components/Profile/EditRequestManagement";
 //import SubmissionManagement from "./Components/Profile/SubmissionManagement";
 import EditSubmitionManagement from "./Components/Profile/EditSubmitionManagement";
 import RequstedStatus from "./Components/RequstedStatus";
+import VivaSchedules from "./Components/VivaSchedules";
 
 function App() {
   return (
@@ -64,6 +65,7 @@ function App() {
           <Route path="/requeststatus" element={<RequstedStatus />} />
 
           <Route path="/profile" element={<Profile />} />
+          <Route path="/vivaschedule" element={<VivaSchedules />} />
           <Route path="/logout" element={<Logout />} />
         </Routes>
       </BrowserRouter>

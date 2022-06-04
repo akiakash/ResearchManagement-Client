@@ -4,7 +4,8 @@ import TextField from "@mui/material/TextField";
 import { Button, Card } from "@mui/material";
 import "@fontsource/roboto";
 import axios from "axios";
-
+import FormControl from "@mui/material/FormControl";
+import Profile from "../Profile/Profile";
 function EditRegistedTopic() {
   const [groupno, setGroupno] = useState("");
   const [topicname, setTopicname] = useState("");
@@ -49,80 +50,81 @@ function EditRegistedTopic() {
   }
 
   return (
-    <Card
-      style={{
-        width: "800px",
-        marginRight: "auto",
-        marginLeft: "auto",
-        marginTop: "50px",
-        backgroundColor: "FFF1EF",
-      }}
-    >
-      <Box
-        style={{ marginLeft: "20px", paddingTop: "50px" }}
-        component="form"
-        sx={{
-          "& .MuiTextField-root": { m: 1, width: "25ch" },
-        }}
-        noValidate
-        autoComplete="off"
-      >
-        <h1 style={{ fontFamily: "Roboto", textAlign: "center" }}>
-          <b>Fill This Form To Update</b>
-        </h1>
+    <div>
+      <Profile />
 
-        <div>
-          <label>Group ID</label>
-          <br></br>
-          <TextField
-            id="outlined-error"
-            label="Enter the Group ID"
-            defaultValue={topic.groupno}
-            style={{ backgroundColor: "white", width: "750px" }}
-            onChange={(e) => setGroupno(e.target.value)}
-          />
-          <br></br>
-          <label>Topic Name</label>
-          <br></br>
-          <TextField
-            id="outlined-error-helper-text"
-            label="Enter The Name"
-            // defaultValue="Hello World"
-            // helperText="Incorrect entry."
-            style={{ backgroundColor: "white", width: "750px" }}
-            defaultValue={topic.topicname}
-            onChange={(e) => setTopicname(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>Topic Description </label>
-          <br></br>
-          <TextField
-            id="outlined-error-helper-text"
-            label="Enter Your Group Description"
-            // helperText="Incorrect entry."
-            style={{ backgroundColor: "white", width: "750px" }}
-            defaultValue={topic.description}
-            onChange={(e) => setDescription(e.target.value)}
-          />
-          <br></br>
-          <label>Student Registration ID</label>
-          <br></br>
-          <TextField
-            id="outlined-error-helper-text"
-            label="Enter Your Registration ID"
-            // defaultValue="Hello World"
-            // helperText="Incorrect entry."
-            style={{ backgroundColor: "white", width: "750px" }}
-            defaultValue={topic.leaderid}
-            onChange={(e) => setLeaderid(e.target.value)}
-          />
-        </div>
-        <Button variant="contained" type="button" onClick={updateTopic}>
-          Update
-        </Button>
-      </Box>
-    </Card>
+      <Card
+        style={{
+          width: "800px",
+          marginRight: "auto",
+          marginLeft: "auto",
+          marginTop: "50px",
+          backgroundColor: "FFF1EF",
+        }}
+      >
+        <Box
+          style={{ marginLeft: "20px", paddingTop: "50px" }}
+          component="form"
+          sx={{
+            "& .MuiTextField-root": { m: 1, width: "25ch" },
+          }}
+          noValidate
+          autoComplete="off"
+        >
+          <h1 style={{ fontFamily: "Roboto", textAlign: "center" }}>
+            <b>Fill This Form To Update</b>
+          </h1>
+
+          <div>
+            <label>Group ID</label>
+            <br></br>
+            <input
+              type="text"
+              defaultValue={topic.groupno}
+              onChange={(e) => setGroupno(e.target.value)}
+              style={{ width: "97%", borderRadius: "10px" }}
+            />
+            <br></br>
+            <label>Topic Name</label>
+            <br></br>
+            <input
+              type="text"
+              defaultValue={topic.topicname}
+              onChange={(e) => setTopicname(e.target.value)}
+              style={{ width: "97%", borderRadius: "10px" }}
+            />
+          </div>
+          <div>
+            <label>Topic Description </label>
+            <br></br>
+            <input
+              id="outlined-error-helper-text"
+              // helperText="Incorrect entry."
+
+              defaultValue={topic.description}
+              onChange={(e) => setDescription(e.target.value)}
+              style={{ width: "97%", borderRadius: "10px" }}
+            />
+            <br></br>
+            <label>Student Registration ID</label>
+            <br></br>
+            <input
+              type="text"
+              id="outlined-error-helper-text"
+              // defaultValue="Hello World"
+              // helperText="Incorrect entry."
+
+              defaultValue={topic.leaderid}
+              onChange={(e) => setLeaderid(e.target.value)}
+              style={{ width: "97%", borderRadius: "10px" }}
+            />
+          </div>
+          <Button variant="contained" type="submit" onClick={updateTopic}>
+            Update
+          </Button>
+        </Box>
+      </Card>
+    </div>
   );
 }
 

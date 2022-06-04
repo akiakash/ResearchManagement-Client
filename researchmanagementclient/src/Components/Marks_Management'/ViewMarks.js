@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { Button, Card } from "@mui/material";
@@ -11,6 +11,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
+import axios from "axios";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -45,6 +46,16 @@ const rows = [
 ];
 
 function ViewMarks() {
+  const [marks, setMarks] = useState([]);
+  const getRequest = () => {
+    axios.get(`http://localhost:3000/MarksManagement`).then((res) => {
+      setMarks(res.data);
+    });
+  };
+
+  useEffect(() => {
+    getRequest();
+  }, [marks]);
   return (
     <div>
       <h1 style={{ textAlign: "center" }}> Student Marks</h1>
@@ -97,16 +108,21 @@ function ViewMarks() {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {rows.map((row) => (
-                  <StyledTableRow key={row.name}>
+                {marks.map((item) => (
+                  <StyledTableRow>
                     <StyledTableCell component="th" scope="row">
-                      {row.name}
+                      {item.groupid}
                     </StyledTableCell>
                     <StyledTableCell align="right">
-                      {row.calories}
+                      {item.studentid}
                     </StyledTableCell>
-                    <StyledTableCell align="right">{row.fat}</StyledTableCell>
-                    <StyledTableCell align="right">{row.carbs}</StyledTableCell>
+                    <StyledTableCell align="right">
+                      {" "}
+                      {item.marks}
+                    </StyledTableCell>
+                    <StyledTableCell align="right">
+                      {item.grade}
+                    </StyledTableCell>
                   </StyledTableRow>
                 ))}
               </TableBody>
@@ -114,17 +130,6 @@ function ViewMarks() {
           </TableContainer>
           <div>
             <br></br>
-            <Button
-              style={{
-                borderRadius: 30,
-                backgroundColor: "#FF715B",
-                padding: "5px 20px",
-                fontSize: "15px",
-              }}
-              variant="contained"
-            >
-              Download PDF
-            </Button>
           </div>
         </Box>
       </Card>

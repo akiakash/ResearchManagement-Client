@@ -22,7 +22,7 @@ const ResponsiveAppBar = () => {
   };
 
   const membermanagement = () => {
-    window.location = "/topicmanagement";
+    window.location = "/membermanagement";
   };
 
   const topicmanagement = () => {
@@ -118,7 +118,7 @@ const ResponsiveAppBar = () => {
               sx={{ my: 2, color: "black" }}
               style={{ marginRight: "10px" }}
             >
-              Team Management
+              Member Management
             </Button>
             <Button
               onClick={topicmanagement}

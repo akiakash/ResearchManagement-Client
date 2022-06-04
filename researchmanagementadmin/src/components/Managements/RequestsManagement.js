@@ -35,19 +35,14 @@ function RequestsManagement() {
     <div>
       <table style={{ border: "40px black ", width: "100%" }}>
         <tr>
+          <th style={{ border: "1px solid #dddddd" }}>View</th>
           <th style={{ border: "1px solid #dddddd" }}>Research Area</th>
           <th style={{ border: "1px solid #dddddd" }}>Group ID</th>
           <th style={{ border: "1px solid #dddddd" }}>Document</th>
           <th style={{ border: "1px solid #dddddd" }}>Response</th>
-          <th style={{ border: "1px solid #dddddd" }}>Submit</th>
         </tr>
         {requests.map((item) => (
           <tr>
-            <td style={{ border: "1px solid #dddddd" }}>{item.researcharea}</td>
-
-            <td style={{ border: "1px solid #dddddd" }}>{item.groupid}</td>
-            <td style={{ border: "1px solid #dddddd" }}>{item.document}</td>
-            <td style={{ border: "1px solid #dddddd" }}>{item.response}</td>
             <td>
               <a href="/AddResponse">
                 <Button
@@ -59,6 +54,11 @@ function RequestsManagement() {
                 </Button>
               </a>
             </td>
+            <td style={{ border: "1px solid #dddddd" }}>{item.researcharea}</td>
+
+            <td style={{ border: "1px solid #dddddd" }}>{item.groupid}</td>
+            <td style={{ border: "1px solid #dddddd" }}>{item.document}</td>
+            <td style={{ border: "1px solid #dddddd" }}>{item.response}</td>
           </tr>
         ))}
       </table>

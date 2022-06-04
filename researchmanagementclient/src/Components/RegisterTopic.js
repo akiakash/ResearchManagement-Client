@@ -44,14 +44,7 @@ function RegisterTopic() {
           lineHeight: "50px",
         }}
       >
-        Online chat may refer to any kind of communication over the Internet
-        that offers a real-time transmission of text messages from sender to
-        receiver. Chat messages are generally short in order to enable other
-        participants to respond quickly. Thereby, a feeling similar to a spoken
-        conversation is created, which distinguishes chatting from other
-        text-based online communication forms such as Internet forums and email.
-        Online chat may address point-to-point communications as well as
-        multicast communications{" "}
+ First We have to register to the account by giving up the essential details of students .{" "}
       </h2>
       <div>
         <Card
@@ -72,7 +65,7 @@ function RegisterTopic() {
             noValidate
             autoComplete="off"
           >
-            <h1 style={{ fontFamily: "Roboto", textAlign: "center" }}>
+            <h1 style={{ fontFamily: "Roboto", textAlign: "center",fontSize:"30px" }}>
               <b>Fill This Form </b>
             </h1>
             <h2
@@ -81,15 +74,13 @@ function RegisterTopic() {
                 marginLeft: "10%",
                 marginRight: "10%",
                 fontSize: "20px",
-                marginTop: "30px",
+                marginTop: "25px",
                 fontFamily: "Roboto",
                 lineHeight: "30px",
               }}
             >
               {" "}
-              First, let's create your account. Once your account has been
-              created you can choose the billing plan that is right for you and
-              link your account with a server provider.
+             Fill this form to request to Register your topic
             </h2>
             <div>
               <label>Group Number</label>

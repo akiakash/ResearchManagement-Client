@@ -42,6 +42,7 @@ app.use("/Request", Request);
 app.use("/Members", Members);
 app.use("/Student", Students);
 app.use("/StudentManagement", StudentManagement);
+app.use("/TopicManagement", TopicManagement);
 
 app.get("/", (req, res) => {
   res.send("We are on Home");

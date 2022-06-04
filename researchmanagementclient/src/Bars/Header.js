@@ -37,8 +37,8 @@ const ResponsiveAppBar = () => {
     window.location = "/request";
   };
 
-  const studentsubmission = () => {
-    window.location = "/studentsubmission";
+  const requeststatus = () => {
+    window.location = "/requeststatus";
   };
 
   const viewmarks = () => {
@@ -165,11 +165,11 @@ const ResponsiveAppBar = () => {
               Request
             </Button>
             <Button
-              onClick={studentsubmission}
+              onClick={requeststatus}
               sx={{ my: 2, color: "black" }}
               style={{ marginRight: "10px" }}
             >
-              Submission
+              Request Status
             </Button>
             <Button
               onClick={viewmarks}

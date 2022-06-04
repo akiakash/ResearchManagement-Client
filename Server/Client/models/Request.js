@@ -19,7 +19,7 @@ const PostSchema = mongoose.Schema({
   },
   document: {
     type: String,
-    required: true,
+    data: Buffer,
   },
   response: {
     type: String,

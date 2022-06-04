@@ -14,6 +14,7 @@ function Request_Supervisor() {
   const [groupid, setGroupid] = useState("");
   const [document, setDocument] = useState("");
   const [response, setResponse] = useState("Processing");
+  const [postImage, setPostImage] = useState({ myFile: "" });
 
   function sendRequest() {
     axios
@@ -22,7 +23,7 @@ function Request_Supervisor() {
         supervisorname: supervisorname,
         cosupervisorname: cosupervisorname,
         groupid: groupid,
-        document: document,
+        document: postImage.myFile,
         response: response,
       })
       .then((response) => {
@@ -34,6 +35,26 @@ function Request_Supervisor() {
         alert("something wrong...");
       });
   }
+
+  const convertToBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+      const fileReader = new FileReader();
+      fileReader.readAsDataURL(file);
+      fileReader.onload = () => {
+        resolve(fileReader.result);
+      };
+      fileReader.onerror = (error) => {
+        reject(error);
+      };
+    });
+  };
+
+  const handleFileUpload = async (e) => {
+    const file = e.target.files[0];
+    const base64 = await convertToBase64(file);
+    setPostImage({ myFile: base64 });
+    console.log(base64);
+  };
 
   return (
     <div>
@@ -120,12 +141,12 @@ function Request_Supervisor() {
 
           <label>Upload Research Overview </label>
           <br></br>
-          <TextField
-            id="outlined-error-helper-text"
-            label="Upload pdf"
-            value={document}
-            style={{ backgroundColor: "white", width: "750px" }}
-            onChange={(e) => setDocument(e.target.value)}
+          <input
+            type="file"
+            label="Image"
+            name="myFile"
+            accept=".jpeg, .png, .jpg"
+            onChange={(e) => handleFileUpload(e)}
           />
           <br></br>
 
@@ -133,7 +154,7 @@ function Request_Supervisor() {
             <Button
               style={{ backgroundColor: "#FF715B" }}
               variant="contained"
-              onClick={(e) => sendRequest(e)}
+              onClick={sendRequest}
               type="button"
             >
               Send Request

@@ -1,5 +1,6 @@
 import React from "react";
 import Profile from "./Profile";
+
 import Box from "@mui/material/Box";
 import { Button, Card } from "@mui/material";
 import "@fontsource/roboto";
@@ -42,33 +43,30 @@ function MemberManagement() {
                 <CardMedia
                   component="img"
                   height="170"
-                  image="./topic.jpeg"
+                  image="./team.jpeg"
                   alt="green iguana"
                 />
+
                 <CardContent>
                   <Typography gutterBottom variant="h6" component="div">
-                    Registed Topic Deatails
+                    Team Deatails
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    This Deatails are student Registed for project topic
-                    selection
+                    This Deatails are Team Registed for project team selection
                   </Typography>
                   <Typography gutterBottom variant="h7" component="div">
                     Group ID -
                   </Typography>
                   <Typography gutterBottom variant="h7" component="div">
-                    Topic Name -
+                    Group Name -
                   </Typography>
                   <Typography gutterBottom variant="h7" component="div">
-                    Topic Description -
-                  </Typography>
-                  <Typography gutterBottom variant="h7" component="div">
-                    Student Registration ID -
+                    Group Description -
                   </Typography>
                 </CardContent>
               </CardActionArea>
               <CardActions>
-                <a href="/memberedit">
+                <a href="/editTopic">
                   <Button
                     style={{
                       borderRadius: 30,

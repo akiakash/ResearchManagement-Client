@@ -26,6 +26,7 @@ import EditTopicManagement from "./Components/Profile/EditTopicManagement";
 import EditRequestManagement from "./Components/Profile/EditRequestManagement";
 //import SubmissionManagement from "./Components/Profile/SubmissionManagement";
 import EditSubmitionManagement from "./Components/Profile/EditSubmitionManagement";
+import RequstedStatus from "./Components/RequstedStatus";
 
 function App() {
   return (
@@ -50,12 +51,17 @@ function App() {
             path="/submissionmanagement"
             element={<SubmissionManagement />}
           />
-          <Route path="/memberedit" element={<EditRegistedTopic />} />
-          <Route path="/editTopic" element={<EditTopicManagement />} />
-          <Route path="/editRequestmanagement" element={<EditRequestManagement />} />
-          <Route path="/SubmitionManagement" element={<EditSubmitionManagement />} />
-
-
+          {/* <Route path="/memberedit" element={<EditRegistedTopic />} /> */}
+          <Route path="/editTopic" element={<EditRegistedTopic />} />
+          <Route
+            path="/editRequestmanagement"
+            element={<EditRequestManagement />}
+          />
+          <Route
+            path="/SubmitionManagement"
+            element={<EditSubmitionManagement />}
+          />
+          <Route path="/requeststatus" element={<RequstedStatus />} />
 
           <Route path="/profile" element={<Profile />} />
           <Route path="/logout" element={<Logout />} />

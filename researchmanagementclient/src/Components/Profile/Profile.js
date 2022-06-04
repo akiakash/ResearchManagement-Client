@@ -26,7 +26,7 @@ const ResponsiveAppBar = () => {
   };
 
   const topicmanagement = () => {
-    window.location = "/membermanagement";
+    window.location = "/topicmanagement";
   };
 
   const requestmanagement = () => {

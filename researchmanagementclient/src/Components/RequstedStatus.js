@@ -95,7 +95,7 @@ function RequstedStatus() {
               <TableHead>
                 <TableRow>
                   <StyledTableCell>Research Area </StyledTableCell>
-                  <StyledTableCell align="right">Document</StyledTableCell>
+                  {/* <StyledTableCell align="right">Document</StyledTableCell> */}
                   <StyledTableCell align="right">
                     Supervisor Name
                   </StyledTableCell>
@@ -108,9 +108,9 @@ function RequstedStatus() {
                     <StyledTableCell component="th" scope="row">
                       {item.researcharea}
                     </StyledTableCell>
-                    <StyledTableCell align="right">
+                    {/* <StyledTableCell align="right">
                       {item.document}
-                    </StyledTableCell>
+                    </StyledTableCell> */}
                     <StyledTableCell align="right">
                       {item.supervisorname}
                     </StyledTableCell>
